@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="baseLayout" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+	  <put-attribute name="nav"   value="/nav.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/body.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+ 
+  
+  
+  <!-- faculty Mapping start -->
+  
+  
+  	 <definition name="facultyhome" extends="baseLayout">
+      <put-attribute name="title"  value="Faculty Home"/> 
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/facultyhome.jsp"/>      
+   </definition>
+   <definition name="facprofile" extends="baseLayout">
+      <put-attribute name="title"  value="Profile"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/facprofile.jsp"/>      
+   </definition>
+   
+   <definition name="faccarddetails" extends="baseLayout">
+      <put-attribute name="title"  value="Card Details"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/faccarddetails.jsp"/>      
+   </definition>
+  	
+  	<definition name="facremarks" extends="baseLayout">
+      <put-attribute name="title"  value="Remark"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/facremarks.jsp"/>      
+   </definition>
+  
+	  <definition name="facnotification" extends="baseLayout">
+	      <put-attribute name="title"  value="Notification"/>
+	      <put-attribute name="menu"   value="/menu.jsp"/>
+	      <put-attribute name="body"   value="/facnotification.jsp"/>      
+	   </definition>
+	   
+	   <definition name="factimetable" extends="baseLayout">
+      		<put-attribute name="title"  value="Time Table"/>
+      		<put-attribute name="menu"   value="/menu.jsp"/>
+      		<put-attribute name="body"   value="/factimetable.jsp"/>      
+   	  </definition>
+   	  
+   	  <definition name="facstdremarks" extends="baseLayout">
+	      <put-attribute name="title"  value="Standard Remarks"/>
+	      <put-attribute name="menu"   value="/menu.jsp"/>
+	      <put-attribute name="body"   value="/facstdremarks.jsp"/>      
+	   </definition>
+	   
+	   <definition name="facchangepass" extends="baseLayout">
+      <put-attribute name="title"  value="Change Password"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/facchangepass.jsp"/>      
+   </definition>
+   
+															<!-- faculty Mapping end -->
+	
+						<!-- student mapping start -->
+
+ <definition name="studenthome" extends="baseLayout">
+      <put-attribute name="title"  value="StudentHome"/>
+      <put-attribute name="menu"   value="/menu2.jsp"/>
+      <put-attribute name="body"   value="/studenthome.jsp"/>
+ </definition>
+ 
+ 
+ 
+  <definition name="studentprofile" extends="baseLayout">
+      <put-attribute name="title"  value="Profile"/>
+      <put-attribute name="menu"   value="/menu2.jsp"/>
+      <put-attribute name="body"   value="/studentprofile.jsp"/>      
+   </definition>
+    <definition name="studentnotification" extends="baseLayout">
+      <put-attribute name="title"  value="Notification"/>
+      <put-attribute name="menu"   value="/menu2.jsp"/>
+      <put-attribute name="body"   value="/studentnotification.jsp"/>      
+   </definition>
+    <definition name="studentreport" extends="baseLayout">
+      <put-attribute name="title"  value="Report"/>
+      <put-attribute name="menu"   value="/menu2.jsp"/>
+      <put-attribute name="body"   value="/studentreport.jsp"/>      
+   </definition>
+    <definition name="studentremark" extends="baseLayout">
+      <put-attribute name="title"  value="Remark"/>
+      <put-attribute name="menu"   value="/menu2.jsp"/>
+      <put-attribute name="body"   value="/studentremark.jsp"/>      
+   </definition>
+    <definition name="studenttimetable" extends="baseLayout">
+      <put-attribute name="title"  value="Time Table"/>
+      <put-attribute name="menu"   value="/menu2.jsp"/>
+      <put-attribute name="body"   value="/studenttimetable.jsp"/>      
+   </definition>
+   <definition name="studentchangepass" extends="baseLayout">
+      <put-attribute name="title"  value="Change Password"/>
+      <put-attribute name="menu"   value="/menu2.jsp"/>
+      <put-attribute name="body"   value="/studentchangepass.jsp"/>      
+   </definition>
+    										<!-- student Mapping end -->
+	
+											<!-- hod mapping start -->
+   
+   
+															
+															
+  <definition name="hodhome" extends="baseLayout">
+      <put-attribute name="title"  value="HOD HomePage"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodhome.jsp"/>      
+   </definition>
+    <definition name="hodprofile" extends="baseLayout">
+      <put-attribute name="title"  value="HODprofile"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodprofile.jsp"/>      
+   </definition>
+   <definition name="hodnotification" extends="baseLayout">
+      <put-attribute name="title"  value="HOD Notification"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodnotification.jsp"/>      
+   </definition>
+   <definition name="hodstudentdetails" extends="baseLayout">
+      <put-attribute name="title"  value="HODStudent Details"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodstudentdetails.jsp"/>      
+   </definition>
+   <definition name="hodfacultydetails" extends="baseLayout">
+      <put-attribute name="title"  value="HODFaculty Details"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodfacultydetails.jsp"/>      
+   </definition>
+   
+ <definition name="hodtimetable" extends="baseLayout">
+      <put-attribute name="title"  value="HOD TimeTable"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodtimetable.jsp"/>      
+   </definition>
+   <definition name="hodstudentreport" extends="baseLayout">
+      <put-attribute name="title"  value="HOD Student Report"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodstudentreport.jsp"/>      
+   </definition>
+    <definition name="hodstdremarks" extends="baseLayout">
+      <put-attribute name="title"  value="HOD Remarks Page"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodstdremarks.jsp"/>      
+   </definition>
+   <definition name="Welcome" extends="baseLayout">
+      <put-attribute name="title"  value="mail page"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/Welcome.jsp"/>      
+   </definition>
+   <definition name="hodchangepass" extends="baseLayout">
+      <put-attribute name="title"  value="HOD ChangePassword"/>
+      <put-attribute name="menu"   value="/menu3.jsp"/>
+      <put-attribute name="body"   value="/hodchangepass.jsp"/>      
+   </definition>
+  																 <!-- hod Mapping end -->
+	
+																<!-- principal mapping start -->
+	<definition name="prinhome" extends="baseLayout">
+      <put-attribute name="title"  value="Principal Home"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/prinhome.jsp"/>      
+   </definition>	
+   <definition name="prinprofile" extends="baseLayout">
+      <put-attribute name="title"  value="Principal Profile"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/prinprofile.jsp"/>      
+   </definition>	
+   <definition name="prinnotification" extends="baseLayout">
+      <put-attribute name="title"  value="PrincipalNotification"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/prinnotification.jsp"/>      
+   </definition>	
+   <definition name="prinstudentdetails" extends="baseLayout">
+      <put-attribute name="title"  value="ADD Student Details"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/prinstudentdetails.jsp"/>      
+   </definition>	
+   <definition name="prinfacultydetails" extends="baseLayout">
+      <put-attribute name="title"  value="ADD Faculty Details"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/prinfacultydetails.jsp"/>      
+   </definition>	
+   <definition name="printimetable" extends="baseLayout">
+      <put-attribute name="title"  value="Exam Time Table"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/printimetable.jsp"/>      
+   </definition>	
+   <definition name="prinstudentreport" extends="baseLayout">
+      <put-attribute name="title"  value="Student Report"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/prinstudentreport.jsp"/>      
+   </definition>	
+   <definition name="princhangepass" extends="baseLayout">
+      <put-attribute name="title"  value="Student ChangePassword"/>
+      <put-attribute name="menu"   value="/menu4.jsp"/>
+      <put-attribute name="body"   value="/princhangepass.jsp"/>      
+   </definition>	
+   													<!-- principal mapping end -->		
+   
+   </tiles-definitions>
+  
