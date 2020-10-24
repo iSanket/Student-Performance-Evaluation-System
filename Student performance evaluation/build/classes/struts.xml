@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		
+		
+		
+		<!-- Faculty Actions start -->
+		<action name="login" class="com.school.LoginAction">
+			<result name="principal"  type="tiles">prinhome</result>
+			<result name="hod"  type="tiles">hodhome</result>
+			<result name="faculty"  type="tiles">facultyhome</result>
+			<result name="student"  type="tiles">studenthome</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+											
+											
+												<!-- faculty action start -->
+											
+											
+											
+		<action name="facultyhome">
+			<result type="tiles">facultyhome</result>
+		</action>
+		<action name="facprofile">
+			<result type="tiles">facprofile</result>
+		</action>
+		
+		<action name="faccarddetails">
+			<result type="tiles">faccarddetails</result>
+		</action>
+		<action name="facremarks">
+			<result type="tiles">facremarks</result>
+		</action>
+		<action name="facnotification" class="com.school.student.ViewfacNotification">
+			<result name="success" type="tiles">facnotification</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		<action name="facnotification">
+			<result type="tiles">facnotification</result>
+		</action>
+		<action name="factimetable" class="com.school.student.ViewTimetable">
+			<result name="success" type="tiles">factimetable</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		<!-- 
+		<action name="factimetable">
+			<result type="tiles">factimetable</result>
+		</action>
+		 -->
+		<action name="facstdremarks">
+			<result type="tiles">facstdremarks</result>
+		</action>
+		<action name="facchangepass">
+			<result type="tiles">facchangepass</result>
+		</action>
+		
+			<!-- Faculty Actions end -->
+			
+			<!-- student action start -->
+			
+		
+		<action name="studenthome">
+			<result type="tiles">studenthome</result>
+		</action>
+		<action name="view" class="com.school.student.ViewStudentProfile">
+		<result name="success" type="tiles">studentprofile</result>
+		</action>
+		<action name="studentprofile">
+			<result type="tiles">studentprofile</result>
+		</action>
+		<action name="studentnotification" class="com.school.student.ViewStudentNotification" method="execute">
+			<result name="success" type="tiles">studentnotification</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		
+		 <action name="studentreport" class="com.school.student.ViewStudentReport" method="execute">
+			<result name="success" type="tiles">studentreport</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		
+		<action name="studentremark" class="com.school.student.ViewHodremarks">
+			<result name="success" type="tiles">studentremark</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		
+	 
+		<action name="studenttimetable" class="com.school.student.ViewTimetable" method="execute">
+			<result name="success" type="tiles">studenttimetable</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		
+		
+		<action name="studentchangepass">
+			<result type="tiles">studentchangepass</result>
+		</action>
+		
+		
+																<!-- hod action start -->
+		
+		<action name="hodhome">
+			<result type="tiles">hodhome</result>
+		</action>
+		<action name="hodprofile">
+			<result type="tiles">hodprofile</result>
+		</action>
+		<action name="hodhome" class="com.school.princstd.HodprofileAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" type="tiles">logout</result>
+		</action>
+		<action name="hodnotification" class="com.school.student.ViewHodNotification">
+			<result name="success" type="tiles">hodnotification</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		<!-- 
+		<action name="hodnotification">
+			<result type="tiles">hodnotification</result>
+		</action>
+		 -->
+		<action name="hodstudentdetails">
+			<result type="tiles">hodstudentdetails</result>
+		</action>
+		<action name="hodfacultydetails">
+			<result type="tiles">hodfacultydetails</result>
+		</action>
+		<action name="hodtimetable" class="com.school.student.ViewTimetable">
+			<result name="success" type="tiles">hodtimetable</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		
+		<!--
+		 
+		 <action name="hodtimetable">
+			<result type="tiles">hodtimetable</result>
+		</action>
+		 --> 
+		 
+		<action name="hodstudentreport">
+			<result type="tiles">hodstudentreport</result>
+		</action>
+		 <action name="princstdreport" class="com.school.princstd.PrinstdreportAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		<action name="hodstdremarks" class="com.school.princstd.HodstdremarksAction">
+			<result name="success" type="tiles">hodstdremarks</result>
+			<result name="failed" type="tiles">logout</result>
+		</action>
+		
+		 <!--
+		<action name="hodstdremarks">
+			<result type="tiles">hodstdremarks</result>
+		</action>
+		 -->
+		<action name="emailer" class="com.email.MailAction" method="execute">
+            <result name="success" type="tiles">hodhome</result>
+         	<result name="error">/error.jsp</result>
+        </action>
+		
+		<action name="Welcome">
+			<result type="tiles">Welcome</result>
+		</action>
+		 
+		
+		<action name="hodchangepass">
+			<result type="tiles">hodchangepass</result>
+		</action>
+		
+		
+																	<!-- hod action end -->
+																	
+									<!-- principal action start -->
+		
+		<action name="prinhome">
+			<result type="tiles">prinhome</result>
+		</action>
+		<action name="prinhome" class="com.school.student.ViewPrinProfile">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		<action name="prinprofile">
+			<result type="tiles">prinprofile</result>
+		</action>
+		<action name="prinprofile1" class="com.school.princstd.PrinprofileAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" type="tiles">logout</result>
+		</action>
+		<action name="prinnotification">
+			<result type="tiles">prinnotification</result>
+		</action>
+		<action name="prinstdnotif" class="com.school.princstd.PrinstdnotificationAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		<action name="prinstudentdetails">
+			<result type="tiles">prinstudentdetails</result>
+		</action>
+		<action name="princstud1" class="com.school.princstd.PrincstdAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" type="tiles">logout</result>
+		</action>
+		<action name="prinfacultydetails" >
+			<result type="tiles">prinfacultydetails</result>
+		</action>
+	 
+		<action name="princfac1" class="com.school.princstd.PrinfacdetailsAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" type="tiles">logout</result>
+		</action>
+	 
+		
+		<action name="prinstudentreport">
+			<result type="tiles">prinstudentreport</result>
+		</action>
+		<action name="princstdreport" class="com.school.princstd.PrinstdreportAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" >/fail.jsp</result>
+		</action>
+		
+		<action name="printimetable">
+			<result type="tiles">printimetable</result>
+		</action>
+		<action name="time" class="com.school.princstd.PrintimetableAction">
+			<result name="success" type="tiles">prinhome</result>
+			<result name="failed" type="tiles">logout</result>
+		</action>
+		
+		<action name="princhangepass">
+			<result type="tiles">princhangepass</result>
+		</action>
+		<action name="logout" class="com.school.LogoutAction">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		
+		
+	</package>
+</struts>
